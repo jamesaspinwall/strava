@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  activity_start: 1
+  distance: 1
+  hr: 1
+  hr_max: 1
+  moving: 1
+  stop: 1
+  speed: 1
+  watts: 1
+  calories: 1
+  kj: 1
+
+two:
+  name: MyString
+  location: MyString
+  activity_start: 1
+  distance: 1
+  hr: 1
+  hr_max: 1
+  moving: 1
+  stop: 1
+  speed: 1
+  watts: 1
+  calories: 1
+  kj: 1

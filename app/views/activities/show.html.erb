@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @activity.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @activity.location %>
+</p>
+
+<p>
+  <strong>Activity start:</strong>
+  <%= @activity.activity_start %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @activity.distance %>
+</p>
+
+<p>
+  <strong>Hr:</strong>
+  <%= @activity.hr %>
+</p>
+
+<p>
+  <strong>Hr max:</strong>
+  <%= @activity.hr_max %>
+</p>
+
+<p>
+  <strong>Moving:</strong>
+  <%= @activity.moving %>
+</p>
+
+<p>
+  <strong>Stop:</strong>
+  <%= @activity.stop %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @activity.speed %>
+</p>
+
+<p>
+  <strong>Watts:</strong>
+  <%= @activity.watts %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @activity.calories %>
+</p>
+
+<p>
+  <strong>Kj:</strong>
+  <%= @activity.kj %>
+</p>
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>
