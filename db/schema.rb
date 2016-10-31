@@ -14,19 +14,18 @@ ActiveRecord::Schema.define(version: 20161028142927) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
+    t.integer  "athlete"
     t.string   "location"
-    t.integer  "activity_start"
-    t.integer  "distance"
-    t.integer  "hr"
-    t.integer  "hr_max"
+    t.integer  "start_ts"
+    t.float    "distance"
     t.integer  "moving"
-    t.integer  "stop"
-    t.integer  "speed"
-    t.integer  "watts"
-    t.integer  "calories"
-    t.integer  "kj"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "stopped"
+    t.float    "speed"
+    t.float    "watts"
+    t.float    "calories"
+    t.float    "kj"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
