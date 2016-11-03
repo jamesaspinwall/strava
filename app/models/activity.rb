@@ -1,4 +1,5 @@
 class Activity < ApplicationRecord
+  has_paper_trail
   cattr_accessor :objects
 
   class << self
