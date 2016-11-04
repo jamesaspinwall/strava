@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @segment.name %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @segment.distance %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @segment.grade %>
+</p>
+
+<p>
+  <strong>Grade max:</strong>
+  <%= @segment.grade_max %>
+</p>
+
+<p>
+  <strong>High:</strong>
+  <%= @segment.high %>
+</p>
+
+<p>
+  <strong>Low:</strong>
+  <%= @segment.low %>
+</p>
+
+<p>
+  <strong>Start location:</strong>
+  <%= @segment.start_location %>
+</p>
+
+<p>
+  <strong>End location:</strong>
+  <%= @segment.end_location %>
+</p>
+
+<%= link_to 'Edit', edit_segment_path(@segment) %> |
+<%= link_to 'Back', segments_path %>

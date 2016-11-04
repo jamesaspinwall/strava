@@ -1,4 +1,4 @@
-namespace :activities do
+namespace :util do
     desc "load from yaml to DB"
     task load: :environment do
         Activity.read_activities
@@ -8,5 +8,4 @@ namespace :activities do
     task download: :environment do
         Activity.download
     end
-
 end

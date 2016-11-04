@@ -1,0 +1,57 @@
+<%= form_for(segment) do |f| %>
+  <% if segment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(segment.errors.count, "error") %> prohibited this segment from being saved:</h2>
+
+      <ul>
+      <% segment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distance %>
+    <%= f.text_field :distance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade %>
+    <%= f.text_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade_max %>
+    <%= f.text_field :grade_max %>
+  </div>
+
+  <div class="field">
+    <%= f.label :high %>
+    <%= f.text_field :high %>
+  </div>
+
+  <div class="field">
+    <%= f.label :low %>
+    <%= f.text_field :low %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_location %>
+    <%= f.text_field :start_location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_location %>
+    <%= f.text_field :end_location %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

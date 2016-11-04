@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028142927) do
+ActiveRecord::Schema.define(version: 20161101124254) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 20161028142927) do
     t.float    "kj"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "segments", force: :cascade do |t|
+    t.string   "name"
+    t.float    "distance"
+    t.float    "grade"
+    t.float    "grade_max"
+    t.float    "high"
+    t.float    "low"
+    t.string   "start_location"
+    t.string   "end_location"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

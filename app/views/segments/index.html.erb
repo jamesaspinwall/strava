@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Segments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Distance</th>
+      <th>Grade</th>
+      <th>Grade max</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Start location</th>
+      <th>End location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @segments.each do |segment| %>
+      <tr>
+        <td><%= segment.name %></td>
+        <td><%= segment.distance %></td>
+        <td><%= segment.grade %></td>
+        <td><%= segment.grade_max %></td>
+        <td><%= segment.high %></td>
+        <td><%= segment.low %></td>
+        <td><%= segment.start_location %></td>
+        <td><%= segment.end_location %></td>
+        <td><%= link_to 'Show', segment %></td>
+        <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
+        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Segment', new_segment_path %>
