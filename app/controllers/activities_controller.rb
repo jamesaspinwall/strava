@@ -4,7 +4,14 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.all.order(start_ts: 'DESC')
+    case params[:location]
+      when 'cj'
+        @activities = Activity.cj.order(start_ts: 'DESC')
+      when 'fx'
+        @activities = Activity.fx.order(start_ts: 'DESC')
+      else
+        @activities = Activity.all.order(start_ts: 'DESC')
+    end
   end
 
   # GET /activities/1
@@ -62,13 +69,13 @@ class ActivitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_activity
-      @activity = Activity.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_activity
+    @activity = Activity.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def activity_params
-      params.require(:activity).permit(:name, :location, :activity_start, :distance, :hr, :hr_max, :moving, :stop, :speed, :watts, :calories, :kj)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def activity_params
+    params.require(:activity).permit(:name, :location, :activity_start, :distance, :hr, :hr_max, :moving, :stop, :speed, :watts, :calories, :kj)
+  end
 end
