@@ -23,8 +23,8 @@
       <tr>
         <td><%= Time.at(activity.start_ts).strftime("%a %m/%e %l %P") %></td>
         <td><%= "%5.1f"%activity.distance %></td>
-        <td><%= "#{activity.moving/60}" %></td>
-        <td><%= activity.stopped/60 %></td>
+        <td><%= "#{activity.moving / 60}" %></td>
+        <td><%= activity.stopped / 60 %></td>
         <td><%= "%5.1f"%activity.speed %></td>
         <td><%= "%5.1f"%activity.watts %></td>
         <td><%= "%5.1f"%activity.calories %></td>
